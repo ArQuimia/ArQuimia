@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Open Graph y Twitter Cards para mejorar el aspecto al compartir en redes sociales: -->
+    <meta property="og:title" content="Arquimia | Arquitectura y Diseño">
+    <meta property="og:description" content="Transformamos espacios con creatividad, funcionalidad y estilo.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Mi Web - Contacto</title>
+    <meta name="description" content="Descripción optimizada de la empresa o servicio.">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_MEASUREMENT_ID}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '{{GA_MEASUREMENT_ID}}');
+    </script>
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Nombre Empresa","url":"https://{{TU_USUARIO}}.github.io/{{REPO}}/","logo":"/assets/images/logo.png"}
+</script>
+</head>
+<body>
+    <header>
+        <div class="pagina-ficticia">------- Esto es una página ficticia como trabajo final de proyecto. -------</div>
+        <div class="container header-flex">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Arquimia - Arquitectura y Diseño">
+                </a>
+            </div>
+
+            <!-- BOTÓN DE MENÚ MÓVIL -->
+            <button id="nav-toggle" aria-label="Abrir menú">☰</button>
+
+            <!-- NAVEGACIÓN -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="index"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="acerca.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <!-- <li><a href="proyectos.html">Proyectos</a></li> -->
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <!-- <li><a href="noticias.html">Noticias</a></li> -->
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="blog.html" class="resaltado">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero-video">
+            <video autoplay muted class="hero-bg">
+                <source src="contacto.mp4" type="video/mp4">
+                
+            </video>
+
+            <div class="hero-overlay">
+                <h1>Contáctanos</h1>
+                <p>¿Tienes un proyecto de diseño o arquitectura en mente? Nos encantaría escucharte.</p>
+                <a href="contacto.html" class="btn-cta">Solicita tu proyecto</a>
+            </div>
+        </section>
+
+<main>
+    <section class="contact-info">
+        <h2>Información de contacto</h2>
+        <p>En nuestro estudio creemos que cada espacio cuenta una historia. Cuéntanos la tuya y juntos crearemos un diseño funcional, estético y sostenible.</p>
+        <p><strong>Dirección:</strong> Calle del Diseño 123, Madrid, España</p>
+        <p><strong>Teléfono:</strong> <a href="tel:+34900123456">+34 600 000 000</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contacto@estudioarquitectura.com">arquimia@estudio.com</a></p>
+        <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00</p>
+    </section>
+
+    <section class="contact-form">
+        <h2>Formulario de contacto</h2>
+        <form id="form-contacto" action="enviar_formulario.php" method="POST">
+            <label for="nombre">Nombre completo*</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="tipo-proyecto">Tipo de proyecto*</label>
+            <select id="tipo-proyecto" name="tipo-proyecto" required>
+                <option value="">Selecciona una opción</option>
+                <option value="residencial">Diseño residencial</option>
+                <option value="comercial">Diseño comercial</option>
+                <option value="interiorismo">Interiorismo</option>
+                <option value="reforma">Reforma integral</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="mensaje">Cuéntanos sobre tu proyecto*</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+</main>
+ <br><br>
+    <footer>
+        <div class="container footer-content">
+            <!-- Logo y descripción -->
+            <div class="footer-brand">
+                <h2>ArQuimia</h2>
+                <p>Transformamos espacios con diseño, arquitectura y funcionalidad.</p>
+            </div>
+
+            <!-- Navegación -->
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="/aviso-legal.html">Aviso Legal</a>
+                <a href="/privacidad.html">Política de Privacidad</a>
+                <a href="/contacto.html">Contacto</a>
+                <a href="/proyectos.html">Proyectos</a>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>📍 Calle del Diseño 123, Madrid, España</p>
+                <p>✉️ arquimia@estudio.com</p>
+                <p>☎️ +34 600 000 000</p>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <a href="#" aria-label="Facebook"> <img src="facebook.svg" alt="Facebook" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+  Facebook</a>
+                <a href="#" aria-label="Instagram"><img src="ins.svg" alt="Facebook" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+  Instagram</a>
+                <a href="#" aria-label="LinkedIn"><img src="link.svg" alt="Facebook" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+  LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Arquimia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>

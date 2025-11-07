@@ -1,0 +1,658 @@
+:root {
+  --max: 1200px;
+  --gap: 1.25rem;
+  --brand: #0a5;
+}
+
+/* ====== ESTILOS BASE ====== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: #111;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Contenedor flexible */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  flex-wrap: wrap; /* Esto permite que los elementos se acomoden sin superponerse */
+  max-width: 100%;
+  width: 100%;
+}
+header .container {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 10px 5px;          /* reduce el espacio lateral */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Logo */
+.logo img {
+  height: 45px; /* ajusta según el tamaño que quieras */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+#nav {
+  flex: 1;
+  text-align: right;
+  /* display: block; */
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;   /* espacio entre enlaces */
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: color 0.3s;
+}
+.resaltado {
+    font-weight: bold !important;
+    border: 1px solid #333; 
+    border-radius: 3px  !important; 
+    text-decoration: none;       /* Quitar subrayado */
+    color: #333;      
+    transition: background 0.3s, color 0.3s;  
+    padding: 7px 10px;  
+}
+
+
+/* .logo img {
+    height: 45px;
+   
+    width: auto;
+    display: block;
+    object-fit: contain;
+} */
+
+
+
+/* Hover o enlace activo */
+#nav a:hover,
+#nav a.active {
+  color: #40435a /* naranja de acento */
+}
+
+/* Línea inferior en hover o activo */
+#nav a.active::after,
+#nav a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #40435a;
+}
+
+/* Botón menú móvil */
+#nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  header .container {
+    justify-content: space-between;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav {
+    display: none;
+    width: 100%;
+  }
+  /* Cuando se active (ej. con JS) */
+  #nav.active {
+    display: block;
+  }
+
+  #nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #nav a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  #nav.open {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+}
+.pagina-ficticia {
+  background-color: #fadd5d;
+  padding: 5px;
+  text-align: center;
+}
+
+/* ===== HERO PARALLAX BLOG ===== */
+.blog-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url('salon.webp'); /* cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.blog-hero-2 {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url('iluminacion.webp'); /* cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.blog-hero-2 h1 {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.267);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+.blog-hero-2 p {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.267);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+
+.blog-hero-3 {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url(blog-3.jpg); /* cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e3e4e9;
+ 
+  overflow: hidden;
+}
+.blog-hero-3 h1 {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.342);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+.blog-hero-3 p {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.342);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+
+.blog-hero-4 {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url(blog-4.jpg); /* cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e3e4e9;
+ 
+  overflow: hidden;
+}
+.blog-hero-4 h1 {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.219);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+.blog-hero-4 p {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.219);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+
+.blog-hero-5 {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url(blog-5.jpg); /* cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e3e4e9;
+ 
+  overflow: hidden;
+}
+.blog-hero-5 h1 {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.39);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+.blog-hero-5 p {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.39);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+
+.blog-hero-6 {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url(blog-6.jpg); /* cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e3e4e9;
+ 
+  overflow: hidden;
+}
+.blog-hero-6 h1 {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.432);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+.blog-hero-6 p {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.432);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+  
+}
+
+.blog-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.blog-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  margin: 0;
+}
+
+.blog-hero-content h1 {
+ font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.blog-hero-content p {
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-hero {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .blog-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .blog-hero-content p {
+    
+    font-size: 14px;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+    font-weight: 400;
+    color: #222;
+    line-height: 1.8;   /* mejora la legibilidad */
+ 
+  }
+}
+
+/* ===== BLOG POST BASE ===== */
+.blog-post.container {
+  max-width: 800px;   /* igual que en .sobre-nosotros */
+  margin: 0 auto;     /* centra el bloque */
+  font-family: Arial, sans-serif;
+  padding: 60px 20px;
+  color: #555;
+  line-height: 1.8;   /* mejora la legibilidad */
+}
+
+/* ===== TITULOS PRINCIPALES ===== */
+.blog-post h1.post-title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+} */
+
+ .blog-post .post-meta {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+/* ===== TITULOS DE SECCION ===== */
+.blog-post h2 {
+  position: relative;        /* para el subrayado animado */
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #333;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.blog-post h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;              /* distancia del subrayado */
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #40435a; /* mismo color elegante */
+  transition: width 0.3s ease;
+}
+
+.blog-post h2:hover::after {
+  width: 100%;               /* subrayado animado */
+}
+
+/* ===== PÁRRAFOS ===== */
+.blog-post p {
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* ===== CITA O FRASE DESTACADA (opcional) ===== */
+.blog-post blockquote {
+  border-left: 4px solid #40435a;
+  padding-left: 15px;
+  color: #444;
+  font-style: italic;
+  margin: 30px 0;
+}
+
+/* ===== BOTÓN FINAL (CTA) ===== */
+.blog-post .btn {
+  display: inline-block;
+  background-color: #40435a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.blog-post .btn:hover {
+  background-color: #2c2f45;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .blog-post.container {
+    padding: 40px 15px;
+  }
+
+  .blog-post h1.post-title {
+    font-size: 1.8rem;
+  }
+
+  .blog-post h2 {
+    font-size: 1.4rem;
+  }
+
+  .blog-post p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+footer {
+  background-color: #f7f7f7; /* fondo claro elegante */
+  color: #333;               /* texto gris oscuro */
+  font-family: "Poppins", sans-serif;
+  padding: 40px 20px 20px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.footer-brand h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.footer-links, .footer-contact, .footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.footer-links a, .footer-contact p {
+  color: #555;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #0a5; /* color sutil para hover */
+}
+
+.footer-social a {
+  font-size: 1.2rem;
+  color: #555;
+  margin-right: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  color: #0a5;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Responsive: adapta columnas en móviles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-links, .footer-contact, .footer-social {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social a {
+    margin: 0 8px;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-links, .footer-contact, .footer-social {
+    align-items: center;
+  }
+
+  .footer-social a {
+    margin: 0 10px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-nav a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .footer-social a {
+    margin: 0 8px;
+  }
+}
+

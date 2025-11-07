@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Open Graph y Twitter Cards para mejorar el aspecto al compartir en redes sociales: -->
+    <meta property="og:title" content="Arquimia | Arquitectura y Diseño">
+    <meta property="og:description" content="Transformamos espacios con creatividad, funcionalidad y estilo.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Mi Web - Inicio</title>
+    <meta name="description" content="Descripción optimizada de la empresa o servicio.">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="acerca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_MEASUREMENT_ID}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '{{GA_MEASUREMENT_ID}}');
+    </script>
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Nombre Empresa","url":"https://{{TU_USUARIO}}.github.io/{{REPO}}/","logo":"/assets/images/logo.png"}
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="pagina-ficticia">------- Esto es una página ficticia como trabajo final de proyecto. -------</div>
+        <div class="container header-flex">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Arquimia - Arquitectura y Diseño">
+                </a>
+            </div>
+
+            <!-- BOTÓN DE MENÚ MÓVIL -->
+            <button id="nav-toggle" aria-label="Abrir menú">☰</button>
+
+            <!-- NAVEGACIÓN -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="index"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="acerca.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <!-- <li><a href="proyectos.html">Proyectos</a></li> -->
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <!-- <li><a href="noticias.html">Noticias</a></li> -->
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="blog.html" class="resaltado">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+ <section class="hero">
+            <div class="slider" id="slider">
+                <div class="slide active"><img src="casa-1.webp" alt="Slide 1"></div>
+                <div class="slide"><img src="portada.webp" alt="Slide 2"></div>
+                <div class="slide"><img src="cocina-3.webp" alt="Slide 3"></div>
+            </div>
+
+        
+
+            <div class="hero-overlay">
+                <h1>Sobre Nosotros</h1>
+                <p>Más de 30 años transformando ideas en espacios que inspiran.</p>
+                <a href="contacto.html" class="btn-cta">Solicita tu proyecto</a>
+            </div>
+             <button class="prev" id="prev">‹</button>
+            <button class="next" id="next">›</button>
+        </section>
+
+
+        <!-- HISTORIA -->
+        <section class="historia">
+            <div class="container">
+                <h2>Nuestra Historia</h2>
+                <p>Hace más de tres décadas, un grupo de jóvenes arquitectos soñó con crear un estudio donde el diseño,
+                    la emoción y la técnica convivieran en equilibrio. De esa visión nació <strong>ARQUIMIA</strong>, un
+                    espacio creativo dedicado a transformar la forma en que las personas viven, trabajan y experimentan
+                    su entorno.</p>
+
+                <p>Desde nuestros inicios, nos propusimos romper con lo convencional. Queríamos que cada proyecto
+                    contara una historia, que los espacios tuvieran alma y que la arquitectura no fuera solo
+                    construcción, sino también un lenguaje de conexión entre las personas y su entorno.</p>
+
+                <p>Con el paso del tiempo, esa idea se convirtió en nuestro sello: fusionar arte, funcionalidad y
+                    sostenibilidad en cada proyecto. Hoy, con más de 30 años de trayectoria, seguimos manteniendo viva
+                    la misma pasión que nos inspiró desde el primer día.</p>
+            </div>
+        </section>
+
+        <!-- QUIÉNES SOMOS -->
+        <section class="quienes-somos bg-light">
+            <div class="container">
+                <h2>Quiénes Somos</h2>
+                <p>En <strong>Arquimia</strong> somos un equipo multidisciplinario de arquitectos, interioristas,
+                    diseñadores, visualizadores 3D y especialistas en construcción. Compartimos una misma filosofía:
+                    crear espacios con propósito, equilibrio y belleza.</p>
+
+                <p>Nos apasiona comprender la esencia de cada cliente y convertir sus ideas en experiencias
+                    arquitectónicas únicas. Cada línea, material, textura y volumen que diseñamos tiene una intención:
+                    mejorar la vida de las personas a través del espacio.</p>
+
+                <p>Trabajamos tanto en proyectos residenciales, comerciales, corporativos y urbanísticos, como en
+                    propuestas de diseño interior y paisajismo, abordando cada uno con el mismo compromiso estético y
+                    técnico.</p>
+            </div>
+        </section>
+
+        <!-- FILOSOFÍA -->
+        <section class="filosofia">
+            <div class="container">
+                <h2>Nuestra Filosofía</h2>
+                <p>En Arquimia creemos que el diseño no es un lujo, sino una forma de generar bienestar. Cada proyecto
+                    es una oportunidad para redefinir la relación entre la forma, la luz, los materiales y la emoción.
+                </p>
+
+                <p>Buscamos la armonía entre estética y funcionalidad, combinando lo mejor de la tradición
+                    arquitectónica con la innovación contemporánea. Nos inspiramos en la naturaleza, en la geometría y
+                    en la vida cotidiana para crear espacios que evolucionan con quienes los habitan.</p>
+
+                <blockquote>“La arquitectura es poesía construida: cada espacio debe contar una historia y transmitir
+                    una emoción.”</blockquote>
+            </div>
+        </section>
+
+        <!-- CÓMO TRABAJAMOS -->
+        <section class="como-trabajamos bg-light">
+            <div class="container">
+                <h2>Cómo Trabajamos</h2>
+                <ol>
+                    <li><strong>Escucha y comprensión:</strong> cada proyecto comienza entendiendo profundamente al
+                        cliente, su estilo de vida y sus aspiraciones.</li>
+                    <li><strong>Diseño conceptual:</strong> desarrollamos ideas creativas y visualizaciones que permiten
+                        imaginar el proyecto antes de construirlo.</li>
+                    <li><strong>Desarrollo técnico y materiales:</strong> elegimos soluciones sostenibles, innovadoras y
+                        funcionales que aporten valor y durabilidad.</li>
+                    <li><strong>Ejecución y acompañamiento:</strong> supervisamos cada detalle, asegurando que la obra
+                        conserve la esencia del diseño original.</li>
+                </ol>
+
+                <p>Gracias a herramientas de modelado 3D, renders hiperrealistas y recorridos virtuales, nuestros
+                    clientes pueden visualizar su espacio final con total precisión.</p>
+            </div>
+        </section>
+
+        <!-- COMPROMISO -->
+        <section class="compromiso">
+            <div class="container">
+                <h2>Nuestro Compromiso</h2>
+                <p>Nos mueve un compromiso real con la calidad, la honestidad y la sostenibilidad. Creemos que la buena
+                    arquitectura es aquella que trasciende el tiempo, que no solo se ve bien hoy, sino que sigue
+                    inspirando dentro de veinte años.</p>
+
+                <p>Cuidamos los recursos, integramos soluciones eficientes y apostamos por materiales responsables. Cada
+                    proyecto busca dejar una huella positiva — no solo en quienes lo habitan, sino también en el entorno
+                    que lo rodea.</p>
+            </div>
+        </section>
+
+        <!-- EQUIPO -->
+        <section class="equipo bg-light">
+            <div class="container">
+                <h2>Nuestro Equipo</h2>
+                <p>En ARQUIMIA trabajamos como una familia creativa. Cada miembro aporta su talento, experiencia y
+                    visión personal para lograr resultados integrales. Arquitectos, diseñadores de interiores,
+                    visualizadores, ingenieros y expertos en materiales colaboran con un mismo objetivo: crear espacios
+                    que emocionen y funcionen.</p>
+
+                <p>Nos une una forma de trabajar cercana, profesional y apasionada. No creemos en fórmulas rígidas, sino
+                    en diseñar experiencias que se adaptan a cada historia.</p>
+            </div>
+        </section>
+
+        <!-- FUTURO -->
+        <section class="futuro">
+            <div class="container">
+                <h2>Mirando al Futuro</h2>
+                <p>El futuro de la arquitectura es emocional, sostenible y digital. Por eso, en ArQuimia seguimos
+                    explorando nuevas tecnologías como la realidad aumentada, la visualización interactiva y el diseño
+                    paramétrico, para ofrecer experiencias más inmersivas y personalizadas.</p>
+
+                <p>Nuestro objetivo es seguir creciendo sin perder la esencia: crear espacios que inspiren, conecten y
+                    mejoren la vida de las personas.</p>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="cta-contacto bg-light">
+            <div class="container">
+                <h2>¿Quieres conocernos mejor?</h2>
+                <p>Te invitamos a descubrir más sobre nuestro trabajo, nuestros proyectos y la pasión que ponemos en
+                    cada detalle.</p>
+                <a href="contacto.html" class="btn">Contáctanos</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container footer-content">
+            <!-- Logo y descripción -->
+            <div class="footer-brand">
+                <h2>ArQuimia</h2>
+                <p>Transformamos espacios con diseño, arquitectura y funcionalidad.</p>
+            </div>
+
+            <!-- Navegación -->
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="/aviso-legal.html">Aviso Legal</a>
+                <a href="/privacidad.html">Política de Privacidad</a>
+                <a href="/contacto.html">Contacto</a>
+                <a href="/proyectos.html">Proyectos</a>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>📍 Calle del Diseño 123, Madrid, España</p>
+                <p>✉️ arquimia@estudio.com</p>
+                <p>☎️ +34 600 000 000</p>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <a href="#" aria-label="Facebook"> <img src="facebook.svg" alt="Facebook"
+                        style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+                    Facebook</a>
+                <a href="#" aria-label="Instagram"><img src="ins.svg" alt="Facebook"
+                        style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+                    Instagram</a>
+                <a href="#" aria-label="LinkedIn"><img src="link.svg" alt="Facebook"
+                        style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+                    LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Arquimia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>

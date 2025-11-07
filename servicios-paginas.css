@@ -1,0 +1,584 @@
+/* Estilos para la página de Servicio Residencial */
+
+/* ====== ESTILOS GENERALES ====== */
+:root {
+  --max: 1200px;
+  --gap: 1.25rem;
+  --brand: rgb(71, 73, 72);
+ 
+  --text-color: #333;
+  --hover-color: #40435a;
+  --cta-bg: rgb(252, 204, 47);
+  --cta-hover-bg: #e6e6e6;
+}
+
+
+/* ====== ESTILOS BASE ====== */
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: #111;
+  
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .container {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 10px 5px;          /* reduce el espacio lateral */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Contenedor flexible */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  flex-wrap: wrap; /* Esto permite que los elementos se acomoden sin superponerse */
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  height: 45px; /* ajusta según el tamaño que quieras */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navegación */
+#nav {
+  display: flex;
+  justify-content: flex-end; /* alinea los enlaces a la derecha */
+  flex: 1; /* ocupa el espacio restante */
+  text-align: right;
+  /* display: block; */
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;   /* espacio entre enlaces */
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: color 0.3s;
+}
+.resaltado {
+    font-weight: bold !important;
+    border: 1px solid #333; 
+    border-radius: 3px  !important; 
+    text-decoration: none;       /* Quitar subrayado */
+    color: #333;      
+    transition: background 0.3s, color 0.3s;  
+    padding: 7px 10px;  
+}
+
+/* Hover o enlace activo */
+#nav a:hover,
+#nav a.active {
+  color: #40435a /* naranja de acento */
+}
+
+/* Línea inferior en hover o activo */
+#nav a.active::after,
+#nav a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #40435a;
+}
+
+/* Botón menú móvil */
+#nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  header .container {
+    justify-content: space-between;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav {
+    display: none;
+    width: 100%;
+  }
+  /* Cuando se active (ej. con JS) */
+  #nav.active {
+    display: block;
+  }
+
+  #nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+     align-items: center;
+  }
+
+  #nav a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  #nav.open {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+}
+  
+.pagina-ficticia {
+  background-color: #fadd5d;
+  padding: 5px;
+  text-align: center;
+}
+
+/* ====== HERO ====== */
+.hero-residencial {
+  height: 50vh;
+  background: url('residencial.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-servicios {
+  height: 50vh;
+  background: url('comercial.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-industrial {
+  height: 50vh;
+  background: url('industrial.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-interiores {
+  height: 50vh;
+  background: url('interiores.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  
+}
+.hero-content h1 {
+    color: rgb(15, 15, 15);
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+}
+
+/* ====== CONTENIDO DEL SERVICIO ====== */
+.service-post {
+  padding: 4rem;
+  background-color: var(--background-light);
+ 
+}
+.service-post p {
+  font-size: 1rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--hover-color);
+}
+
+.post-intro {
+  margin-bottom: 2rem;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+
+.post-intro p {
+  /* font-size: 1.2rem; */
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* ====== SECCIONES DE TEXTO ====== */
+.post-section {
+  margin-bottom: 3rem;
+}
+
+.post-section h2 {
+  font-size: 1.5rem;
+  color: var(--brand);
+  margin-bottom: 1.5rem;
+}
+
+.post-section p {
+  /* font-size: 1.2rem; */
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* ====== TESTIMONIOS ====== */
+.testimonios {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  flex: 1 1 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial span {
+  font-weight: 600;
+  color: var(--brand);
+  font-size: 0.9rem;
+}
+
+/* ====== CTA FINAL ====== */
+.cta-contacto {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--cta-bg);
+  color: #fff;
+}
+
+.cta-contacto .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: var(--cta-bg);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.cta-contacto .btn:hover {
+  background-color: var(--cta-hover-bg);
+}
+
+/* ====== BLOQUES DE SERVICIO ====== */
+.service-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.service-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image, .service-text {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  color: var(--brand);
+  margin-bottom: 20px;
+}
+
+.service-text p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.service-text ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.service-text li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.service-text li::before {
+  content: "\2022";
+  color: var(--brand);
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .service-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-text ul {
+    padding-left: 0;
+  }
+
+  .service-text li {
+    text-align: left;
+  }
+
+  .cta-contacto h2 {
+    font-size: 2rem;
+  }
+
+  .cta-contacto p {
+    font-size: 1rem;
+  }
+
+  .cta-contacto .btn {
+    font-size: 1.1rem;
+  }
+
+  .testimonial {
+    max-width: 100%;
+  }
+}
+
+
+footer {
+    background-color: #f7f7f7;
+    /* fondo claro elegante */
+    color: #333;
+    /* texto gris oscuro */
+    font-family: "Poppins", sans-serif;
+    padding: 40px 20px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.footer-brand h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.footer-brand p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.footer-links a,
+.footer-contact p {
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0a5;
+    /* color sutil para hover */
+}
+
+.footer-social a {
+    font-size: 1.2rem;
+    color: #555;
+    margin-right: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+    color: #0a5;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Responsive: adapta columnas en móviles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social a {
+        margin: 0 8px;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        align-items: center;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .footer-social a {
+        margin: 0 8px;
+    }
+}
