@@ -366,7 +366,11 @@ header .container {
 
 
 
-
+@media (max-width: 768px) {
+  .bloques-texto {
+    grid-template-columns: 1fr;
+  }
+}
 
 footer {
   background-color: #f7f7f7; /* fondo claro elegante */

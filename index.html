@@ -11,18 +11,29 @@
     <meta property="og:image" content="assets/images/og-image.jpg">
     <meta property="og:type" content="website">
 
-    <title>Mi Web - Inicio</title>
-    <meta name="description" content="Descripción optimizada de la empresa o servicio.">
+    <title>Estudio ArQuimia - Creatividad en Arquitectura y Diseño</title>
+    <meta name="description"
+        content="ArQuimia: Arquitectura y diseño de interiores y exteriores. Creamos espacios únicos que inspiran. Descubre nuestros proyectos y soluciones.">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="canonical" href="https://Arquimia.github.io/ArQuimia/index.html" />
+    <!--para que google sepa que el contenido no es copiado de otro sitio-->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_MEASUREMENT_ID}}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '{{GA_MEASUREMENT_ID}}');
     </script>
     <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Nombre Empresa","url":"https://{{TU_USUARIO}}.github.io/{{REPO}}/","logo":"/assets/images/logo.png"}
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Arquimia",
+  "url": "https://arquimia.github.io/ArQuimia/",
+  "logo": "/assets/images/logo.png"
+}
 </script>
 </head>
 
@@ -53,6 +64,7 @@
                     <li><a href="blog.html" class="resaltado">Blog</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
     <main>
@@ -61,27 +73,19 @@
                 <div class="slide active"><img src="casa-1.webp" alt="Slide 1"></div>
                 <div class="slide"><img src="portada.webp" alt="Slide 2"></div>
                 <div class="slide"><img src="cocina-3.webp" alt="Slide 3"></div>
+
             </div> -->
 
-        <section class="blog-hero">
-        <div class="overlay"></div>
-        <div class="blog-hero-content">
-             <h1>ARQUIMIA</h1>
-            <p>Arquitectura y Diseño</p>
-        </div>
-    </section>
-            <!-- Mueve el overlay y botones fuera del contenedor de slides -->
-            <!-- <div class="hero-overlay">
-                <h1 class="hero-title">ARQUIMIA</h1>
+        <section class="hero-video">
+            <video autoplay muted playsinline class="hero-bg">
+                <source src="hero.mp4" type="video/mp4">
+            </video>
+
+            <div class="blog-hero-content">
+                <h1>ARQUIMIA</h1>
                 <p>Arquitectura y Diseño</p>
-            </div> -->
-
-            <!-- <button class="prev" id="prev">‹</button>
-            <button class="next" id="next">›</button> -->
-        <!-- </section> -->
-
-        <!-- Sección sobre-nosotros debajo del Hero -->
-
+            </div>
+        </section>
         <section class="sobre-nosotros-features">
             <div class="container-doble">
 
@@ -103,14 +107,16 @@
                             reflejen los valores y la personalidad de cada cliente. Nos especializamos en
                             <strong>reformas integrales, proyectos residenciales, diseño de oficinas, espacios
                                 comerciales y paisajismo</strong>, aplicando siempre una visión contemporánea y
-                            sostenible.</p>
+                            sostenible.
+                        </p>
 
                         <p>En cada proyecto buscamos el equilibrio perfecto entre <strong>belleza, confort y
                                 sostenibilidad</strong>. Utilizamos materiales de alta calidad y técnicas constructivas
                             responsables con el medio ambiente, priorizando la eficiencia energética, la durabilidad y
                             el bienestar. Apostamos por la <strong>arquitectura bioclimática</strong> y el
                             <strong>diseño consciente</strong> como pilares fundamentales de nuestra filosofía, porque
-                            creemos que los espacios deben ser tan responsables como inspiradores.</p>
+                            creemos que los espacios deben ser tan responsables como inspiradores.
+                        </p>
 
                         <p>En Arquimia entendemos que el proceso creativo es una experiencia compartida. Por eso,
                             trabajamos mano a mano con nuestros clientes, escuchando sus ideas, necesidades y
@@ -119,13 +125,6 @@
                             explorar materiales, jugar con la iluminación y experimentar cada detalle con realismo. Esta
                             metodología garantiza decisiones seguras, resultados fieles a la visión del cliente y una
                             experiencia de diseño completamente inmersiva.</p>
-
-                        <!-- <p>Más que un estudio, somos un equipo comprometido con la <strong>excelencia, la innovación y
-                                la autenticidad</strong>. En Arquimia convertimos cada proyecto en una oportunidad para
-                            crear lugares que trascienden el tiempo: hogares acogedores, oficinas inspiradoras y
-                            espacios comerciales que comunican la esencia de una marca. Nuestro compromiso es diseñar
-                            arquitectura que emocione, espacios que conecten y ambientes que cuenten historias.</p> -->
-
                     </div>
                 </section>
 
@@ -133,6 +132,7 @@
 
                 <div class="features">
                     <div class="caracteristica">
+
                         <h3>Diseño Innovador</h3>
                         <p>Incorporamos <strong>tendencias contemporáneas en arquitectura y diseño interior</strong>,
                             utilizando materiales sostenibles
@@ -158,57 +158,66 @@
 
 
         <section class="bloque-ideas-imagenes">
-        <div class="contenedor-flex">
+            <div class="contenedor-flex">
 
-            <div class="columna-imagenes">
-      <div class="galeria-mosaico">
-        <div class="img-grande">
-          <img src="index-1.jpg" alt="Proyecto Arquitectónico">
-        </div>
-        <div class="img-pequena">
-          <img src="index-2.jpg" alt="Diseño Interior Moderno">
-        </div>
-        <div class="img-pequena">
-          <img src="index-3.jpg" alt="Render de Espacio Comercial">
-        </div>
-      </div>
-    </div>
+                <div class="columna-imagenes">
+                    <div class="galeria-mosaico">
+                        <div class="img-grande">
+                            <img src="index-1.jpg" alt="Proyecto Arquitectónico">
+                        </div>
+                        <div class="img-pequena">
+                            <img src="index-2.jpg" alt="Diseño Interior Moderno">
+                        </div>
+                        <div class="img-pequena">
+                            <img src="index-3.jpg" alt="Render de Espacio Comercial">
+                        </div>
+                    </div>
+                </div>
 
-         <div class="columna-texto">
-        <section class="ideas">
-            <div class="container">
-                <h2>Visualiza tu Proyecto Antes de Construirlo</h2>
-                <p>En <strong>Arquimia</strong> transformamos tus ideas en experiencias visuales con <em>renders
-                        fotorrealistas</em> y
-                    <em>recorridos virtuales 3D</em>. Gracias a nuestra tecnología avanzada, puedes ver cómo quedará tu
-                    espacio antes
-                    de iniciar la obra, eligiendo materiales, iluminación y distribución con total confianza.
-                </p>
+                <div class="columna-texto">
+                    <section class="ideas">
+                        <div class="container">
+                            <h2>Visualiza tu Proyecto Antes de Construirlo</h2>
+                            <p>En <strong>Arquimia</strong> transformamos tus ideas en experiencias visuales con
+                                <em>renders
+                                    fotorrealistas</em> y
+                                <em>recorridos virtuales 3D</em>. Gracias a nuestra tecnología avanzada, puedes ver cómo
+                                quedará tu
+                                espacio antes
+                                de iniciar la obra, eligiendo materiales, iluminación y distribución con total
+                                confianza.
+                            </p>
 
-                <h2>Diseño Interior y Exterior Realista</h2>
-                <p>Creamos representaciones visuales de alta calidad para <strong>hogares, oficinas y locales
-                        comerciales</strong>.
-                    Cada render refleja fielmente la interacción entre la luz, los colores y los materiales, ayudando a
-                    tomar
-                    decisiones acertadas de diseño y decoración.</p>
+                            <h3>Diseño Interior y Exterior Realista</h3>
+                            <p>Creamos representaciones visuales de alta calidad para <strong>hogares, oficinas y
+                                    locales
+                                    comerciales</strong>.
+                                Cada render refleja fielmente la interacción entre la luz, los colores y los materiales,
+                                ayudando a
+                                tomar
+                                decisiones acertadas de diseño y decoración.</p>
 
-                <h2>Comparte tu Visión</h2>
-                <p>Nuestros proyectos pueden compartirse fácilmente con clientes, colaboradores o contratistas. Ya sea
-                    mediante
-                    imágenes 3D o tours virtuales, la <strong>comunicación visual fluida</strong> asegura que todos
-                    comprendan y
-                    participen en la evolución del diseño.</p>
+                            <h3>Comparte tu Visión</h3>
+                            <p>Nuestros proyectos pueden compartirse fácilmente con clientes, colaboradores o
+                                contratistas. Ya sea
+                                mediante
+                                imágenes 3D o tours virtuales, la <strong>comunicación visual fluida</strong> asegura
+                                que todos
+                                comprendan y
+                                participen en la evolución del diseño.</p>
 
-                <h2>Soluciones Personalizadas y Sostenibles</h2>
-                <p>Aplicamos un enfoque de <strong>diseño sostenible y eficiencia energética</strong>, cuidando cada
-                    recurso y adaptando
-                    los espacios al estilo de vida del cliente. El resultado: ambientes confortables, funcionales y
-                    respetuosos
-                    con el medio ambiente.</p>
+                            <h3>Soluciones Personalizadas y Sostenibles</h3>
+                            <p>Aplicamos un enfoque de <strong>diseño sostenible y eficiencia energética</strong>,
+                                cuidando cada
+                                recurso y adaptando
+                                los espacios al estilo de vida del cliente. El resultado: ambientes confortables,
+                                funcionales y
+                                respetuosos
+                                con el medio ambiente.</p>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section>
-        </div>
-        </div>
         </section>
 
         <section class="galeria-proyectos">
@@ -244,19 +253,19 @@
 
         <div class="estadisticas">
             <div class="stat">
-                <h3 class="numero" data-max="100">0</h3>
+                <p class="numero" data-max="100">0</p>
                 <p>Proyectos Anuales</p>
             </div>
             <div class="stat">
-                <h3 class="numero" data-max="45">0</h3>
+                <p class="numero" data-max="45">0</p>
                 <p>Premios</p>
             </div>
             <div class="stat">
-                <h3 class="numero" data-max="98">0</h3>
+                <p class="numero" data-max="98">0</p>
                 <p>Reseñas Positivas (%)</p>
             </div>
             <div class="stat">
-                <h3 class="numero" data-max="147000">0</h3>
+                <p class="numero" data-max="147000">0</p>
                 <p>Clientes Satisfechos</p>
             </div>
         </div>
@@ -327,7 +336,7 @@
 
             </div>
         </section>
-
+        <button id="backToTop" title="Volver arriba">↑</button>
 
     </main>
     <br><br>
@@ -342,10 +351,10 @@
             <!-- Navegación -->
             <div class="footer-links">
                 <h4>Enlaces</h4>
-                <a href="/aviso-legal.html">Aviso Legal</a>
-                <a href="/privacidad.html">Política de Privacidad</a>
-                <a href="/contacto.html">Contacto</a>
-                <a href="/proyectos.html">Proyectos</a>
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="privacidad.html">Política de Privacidad</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="portafolio.html">Proyectos</a>
             </div>
 
             <!-- Contacto -->

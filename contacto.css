@@ -129,6 +129,7 @@ header .container {
   border: 0;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #000;
 }
 
 /* ====== RESPONSIVE ====== */
@@ -151,10 +152,8 @@ header .container {
   }
 
   #nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
-     align-items: center;
+     background: rgba(255, 255, 255, 0.295); /* deja ver el contenido detrás */
+    height: auto; /* solo ocupa lo que necesita */
   }
 
   #nav a {
@@ -172,7 +171,7 @@ header .container {
 
 }
 
-.hero-video {
+/* .hero-video {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -191,7 +190,7 @@ header .container {
     object-fit: cover;
     filter: brightness(60%);
     z-index: 1;
-}
+} */
 
 .hero-overlay {
     position: relative;
@@ -230,81 +229,51 @@ header .container {
   text-align: center;
 }
 
+
 /* ====== HERO ====== */
-.hero {
-    position: relative;
-    overflow: hidden;
-    height: 90vh;
-    /* altura casi completa de la ventana */
+.blog-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url('contacto.webp');
+  background-size: cover;
+  background-repeat: no-repeat; /* evita que se repita */
+  background-position: center 60%; /* centrada horizontal y verticalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #2b2b2b;
+  overflow: hidden;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
+/* texto del hero */
+.blog-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%); /* 👈 ajusta verticalmente (puedes probar -50%) */
+  text-align: center;
+  color: #000;
+  background: rgba(255,255,255,0.6); /* opcional: mejora legibilidad */
+  padding: 1rem 2rem;
+  border-radius: 8px;
 }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.blog-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
 }
 
-.slide.active {
-    opacity: 1;
-    z-index: 1;
+.blog-hero-content p {
+  font-size: 1.1rem;
 }
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.7);
+/* Asegura que lo que sigue se vea encima */
+main, section, footer {
+  position: relative;
+  z-index: 2;
 }
-
-/* Overlay con texto centrado */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 0.5em 1em;
-    border-radius: 0.25em;
-    text-transform: uppercase;
-}
-
-.hero-overlay p {
-    font-size: 1.2rem;
-    /* background: rgba(0, 0, 0, 0.3); */
-    padding: 0.3em 0.6em;
-    border-radius: 0.25em;
-    margin-top: 0.5em;
-    color: #eeeded;
-
-
-}
-
 /* Botones de navegación */
 .prev,
 .next {
@@ -420,8 +389,32 @@ button:hover {
     background-color: #005f5f;
 }
 
+/*boton subir arriba*/
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+#backToTop:hover {
+  background: #444;
+}
 
-
+@media (max-width: 768px) {
+  .bloques-texto {
+    grid-template-columns: 1fr;
+  }
+}
 
 footer {
     background-color: #f7f7f7;
@@ -504,6 +497,21 @@ footer {
 }
 
 /* Responsive: adapta columnas en móviles */
+@media (max-width: 768px) {
+  .blog-hero {
+    height: 55vh;
+    background-size: cover; /* para que no quede mucho espacio vacío */
+  }
+
+  .blog-hero-content {
+    transform: translate(-50%, -50%);
+    padding: 0.8rem 1.5rem;
+  }
+
+  .blog-hero-content h1 {
+    font-size: 1.8rem;
+  }
+}
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;

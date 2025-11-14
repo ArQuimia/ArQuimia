@@ -161,10 +161,8 @@ header .container {
   }
 
   #nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
-     align-items: center;
+     background: rgba(255, 255, 255, 0.295); /* deja ver el contenido detrás */
+    height: auto; /* solo ocupa lo que necesita */
   }
 
   #nav a {
@@ -444,7 +442,11 @@ header .container {
   }
 }
 
-
+@media (max-width: 768px) {
+  .bloques-texto {
+    grid-template-columns: 1fr;
+  }
+}
 footer {
     background-color: #f7f7f7;
     /* fondo claro elegante */

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // ----- MENÚ RESPONSIVE -----
+  //MENÚ RESPONSIVE
   var toggle = document.getElementById('nav-toggle');
   var nav = document.getElementById('nav');
   if (toggle && nav) {
@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ----- SLIDER -----
+
+
+  //SLIDER
   var slides = document.querySelectorAll('.slide');
   var idx = 0;
   function show(n) {
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(next, 5000);
   }
 
-  // ----- BOTONES SLIDER -----
+  //BOTONES SLIDER-para la pagina de quienes somos(hero)
   var prev = document.getElementById('prev');
   var nextBtn = document.getElementById('next');
   if (prev) prev.addEventListener('click', function () {
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     show(idx);
   });
 
-  // ----- VALIDACIÓN FORMULARIO -----
+  //VALIDACIÓN FORMULARIO
   var form = document.getElementById('contact-form');
   if (form) {
     var err = document.getElementById('form-error');
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ----- FORMULARIO DE CONTACTO (REDIRECCIÓN A 404) -----
+  //FORMULARIO DE CONTACTO (REDIRECCIÓN A 404)
   const formContacto = document.getElementById('form-contacto');
   if (formContacto) {
     formContacto.addEventListener('submit', function (e) {
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// ----- ANIMACIÓN DE NÚMEROS -----
+//script de la animación de los números
 const numeros = document.querySelectorAll('.numero');
 let animado = false;
 
@@ -108,6 +110,26 @@ function animarNumeros() {
 
 window.addEventListener('scroll', animarNumeros);
 
+//este script es para que cambie automáticamente el año del footer cuando cambiemos de año
+const footer = document.querySelector(".footer-bottom p");
+if (footer) {
+  const year = new Date().getFullYear();
+  footer.innerHTML = `© ${year} ArQuimia. Todos los derechos reservados.`;
+}
+
+// ----- BOTÓN VOLVER ARRIBA -----
+const backToTop = document.createElement("button");
+backToTop.id = "backToTop";
+backToTop.textContent = "↑";
+document.body.appendChild(backToTop);
+
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 
 

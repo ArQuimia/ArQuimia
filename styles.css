@@ -141,10 +141,8 @@ header {
   }
 
   #nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
-     align-items: center;
+    background: rgba(255, 255, 255, 0.295); /* deja ver el contenido detrás */
+    height: auto; /* solo ocupa lo que necesita */
   }
 
   #nav a {
@@ -161,7 +159,32 @@ header {
   }
 
 }
-  
+  @media (max-width: 768px) {
+  #blog-hero-content {
+    padding: 0.5rem 0.5rem; /* Menos espacio interno */
+    max-width: 80%;       /* Limita el ancho */
+    border-radius: 0.3rem; /* Ajusta esquinas si quieres */
+  }
+
+  #blog-hero-content h1 {
+    font-size: 1.5rem;  /* Reduce el tamaño del título */
+  }
+
+  #blog-hero-content p {
+    font-size: 0.6rem;    /* Reduce el tamaño del subtítulo */
+  }
+  .hero-video {
+    height: 50vh; /* Ajusta según prefieras */
+  }
+
+  /* .blog-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .blog-hero-content p {
+    font-size: 1rem;
+  } */
+}
 
 .pagina-ficticia {
   background-color: #fadd5d;
@@ -171,11 +194,11 @@ header {
 
 /* ====== HERO ====== */
 
-.blog-hero {
+/* .blog-hero {
   position: relative;
   width: 100%;
   height: 70vh;
-  background-image: url('index.png'); /* cambia esta imagen */
+  background-image: url('index.png'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -185,21 +208,21 @@ header {
   text-align: center;
   color: #fff;
   overflow: hidden;
-}
+} */
 
 
-/* .hero-video {
+.hero-video {
   position: relative;
-  width: 100vw;
-  height: 100vh; 
+  width: 100%;           /* ✅ evita scroll horizontal */
+  height: 70vh;  /*para la altura del video del hero*/
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  z-index: 1;
-} */
-
+  text-align: center;
+  color: #fff;
+}
+/*Video de fondo */
 .hero-bg {
   position: absolute;
   top: 0;
@@ -208,7 +231,22 @@ header {
   height: 100%;
   object-fit: cover;
   filter: brightness(60%);
+  z-index:0 ;
+  filter: brightness(60%);
+}
+/*Contenido encima */
+.blog-hero-content {
+  position: relative;
   z-index: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* opcional: mejora legibilidad */
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
 }
 
 .hero-overlay {
@@ -219,14 +257,23 @@ header {
   justify-content: center;
   text-align: center;
   color: #fff;
-  z-index: 2;
+  z-index: 1;
 }
 
-.hero-title {
+.blog-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.blog-hero-content p {
+  font-size: 1.2rem;
+}
+/* .hero-title {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 2px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(219, 219, 219, 0.4);
   padding: 0.5em 1em;
   border-radius: 0.25em;
   text-transform: uppercase;
@@ -235,11 +282,11 @@ header {
 
 .hero-video p {
   font-size: 1.2rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(75, 75, 75, 0.3);
   padding: 0.3em 0.6em;
   border-radius: 0.25em;
   margin: 0;
-}
+} */
 
 /* Asegura que lo que sigue se vea encima */
 main, section, footer {
@@ -519,6 +566,9 @@ body {
     text-align: center;
 }
 
+.numero{
+  font-weight: bold;
+}
 
 .stat {
   flex: 1 1 150px;
@@ -706,6 +756,29 @@ body {
   line-height: 1.6;
   color: #555;
   font-size: 0.95rem;
+}
+
+
+
+/*boton subir arriba*/
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+#backToTop:hover {
+  background: #444;
 }
 
 /* Responsive: en móviles apila los bloques */

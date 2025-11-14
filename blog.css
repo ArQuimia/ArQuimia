@@ -159,9 +159,8 @@ header .container {
   }
 
   #nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
+     background: rgba(255, 255, 255, 0.295); /* deja ver el contenido detrás */
+    height: auto; /* solo ocupa lo que necesita */
   }
 
   #nav a {
@@ -263,6 +262,8 @@ header .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
+      padding-top: 50px;
+      padding-bottom: 80px;
     }
     .blog-entry {
       background: white;
@@ -304,7 +305,11 @@ header .container {
     }
 
 
-
+@media (max-width: 768px) {
+  .bloques-texto {
+    grid-template-columns: 1fr;
+  }
+}
 
   footer {
   background-color: #f7f7f7; /* fondo claro elegante */

@@ -151,10 +151,8 @@ header .container {
   }
 
   #nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
-     align-items: center;
+    background: rgba(255, 255, 255, 0.295); /* deja ver el contenido detrás */
+    height: auto; /* solo ocupa lo que necesita */
   }
 
   #nav a {
@@ -183,7 +181,7 @@ header .container {
 /* ====== HERO ====== */
 /* Hero */
 .hero {
-  height: 80vh;
+  height: 70vh;
   background: url('hero-servicios.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -236,6 +234,7 @@ header .container {
   display: block;
   filter: brightness(0.7);
 }
+
 
 /* Overlay con texto centrado */
 .hero-overlay {
@@ -653,6 +652,34 @@ ol {
   }
 }
 
+
+/*boton subir arriba*/
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+#backToTop:hover {
+  background: #444;
+}
+
+/*esto es para el espacio entre los enlaces del footer*/
+@media (max-width: 768px) {
+  .bloques-texto {
+    grid-template-columns: 1fr;
+  }
+}
 
 footer {
   background-color: #f7f7f7; /* fondo claro elegante */

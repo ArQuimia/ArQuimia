@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,11 +10,16 @@
     <meta property="og:image" content="assets/images/og-image.jpg">
     <meta property="og:type" content="website">
 
-    <title>Mi Web - Contacto</title>
-    <meta name="description" content="Descripción optimizada de la empresa o servicio.">
+    <title>Contacto – ArQuimia: Arquitectura y Diseño</title>
+    <meta name="description"
+        content="Contáctanos en ArQuimia para tus proyectos de arquitectura y diseño interior y exterior. Estamos listos para crear espacios únicos contigo.">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="canonical" href="https://Arquimia.github.io/ArQuimia/contacto.html" />
+    <!--para que google sepa que el contenido no es copiado de otro sitio-->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_MEASUREMENT_ID}}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,6 +29,7 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Nombre Empresa","url":"https://{{TU_USUARIO}}.github.io/{{REPO}}/","logo":"/assets/images/logo.png"}
 </script>
 </head>
+
 <body>
     <header>
         <div class="pagina-ficticia">------- Esto es una página ficticia como trabajo final de proyecto. -------</div>
@@ -55,103 +60,103 @@
         </div>
     </header>
     <main>
-        <section class="hero-video">
-            <video autoplay muted class="hero-bg">
-                <source src="contacto.mp4" type="video/mp4">
-                
-            </video>
-
-            <div class="hero-overlay">
+        <section class="blog-hero">
+            <div class="overlay"></div>
+            <div class="blog-hero-content">
                 <h1>Contáctanos</h1>
                 <p>¿Tienes un proyecto de diseño o arquitectura en mente? Nos encantaría escucharte.</p>
-                <a href="contacto.html" class="btn-cta">Solicita tu proyecto</a>
             </div>
         </section>
+        <main>
+            <section class="contact-info">
+                <h2>Información de contacto</h2>
+                <p>En nuestro estudio creemos que cada espacio cuenta una historia. Cuéntanos la tuya y juntos crearemos
+                    un diseño funcional, estético y sostenible.</p>
+                <p><strong>Dirección:</strong> Calle del Diseño 123, Madrid, España</p>
+                <p><strong>Teléfono:</strong> <a href="tel:+34900123456">+34 600 000 000</a></p>
+                <p><strong>Email:</strong> <a href="mailto:contacto@estudioarquitectura.com">arquimia@estudio.com</a>
+                </p>
+                <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00</p>
+            </section>
 
-<main>
-    <section class="contact-info">
-        <h2>Información de contacto</h2>
-        <p>En nuestro estudio creemos que cada espacio cuenta una historia. Cuéntanos la tuya y juntos crearemos un diseño funcional, estético y sostenible.</p>
-        <p><strong>Dirección:</strong> Calle del Diseño 123, Madrid, España</p>
-        <p><strong>Teléfono:</strong> <a href="tel:+34900123456">+34 600 000 000</a></p>
-        <p><strong>Email:</strong> <a href="mailto:contacto@estudioarquitectura.com">arquimia@estudio.com</a></p>
-        <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00</p>
-    </section>
+            <section class="contact-form">
+                <h2>Formulario de contacto</h2>
+                <form id="form-contacto" action="enviar_formulario.php" method="POST">
+                    <label for="nombre">Nombre completo*</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-    <section class="contact-form">
-        <h2>Formulario de contacto</h2>
-        <form id="form-contacto" action="enviar_formulario.php" method="POST">
-            <label for="nombre">Nombre completo*</label>
-            <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Correo electrónico*</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="email">Correo electrónico*</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
 
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono">
+                    <label for="tipo-proyecto">Tipo de proyecto*</label>
+                    <select id="tipo-proyecto" name="tipo-proyecto" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="residencial">Diseño residencial</option>
+                        <option value="comercial">Diseño comercial</option>
+                        <option value="interiorismo">Interiorismo</option>
+                        <option value="reforma">Reforma integral</option>
+                        <option value="otro">Otro</option>
+                    </select>
 
-            <label for="tipo-proyecto">Tipo de proyecto*</label>
-            <select id="tipo-proyecto" name="tipo-proyecto" required>
-                <option value="">Selecciona una opción</option>
-                <option value="residencial">Diseño residencial</option>
-                <option value="comercial">Diseño comercial</option>
-                <option value="interiorismo">Interiorismo</option>
-                <option value="reforma">Reforma integral</option>
-                <option value="otro">Otro</option>
-            </select>
+                    <label for="mensaje">Cuéntanos sobre tu proyecto*</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-            <label for="mensaje">Cuéntanos sobre tu proyecto*</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+            <button id="backToTop" title="Volver arriba">↑</button>
+        </main>
+        <br><br>
+        <footer>
+            <div class="container footer-content">
+                <!-- Logo y descripción -->
+                <div class="footer-brand">
+                    <h2>ArQuimia</h2>
+                    <p>Transformamos espacios con diseño, arquitectura y funcionalidad.</p>
+                </div>
 
-            <button type="submit">Enviar mensaje</button>
-        </form>
-    </section>
-</main>
- <br><br>
-    <footer>
-        <div class="container footer-content">
-            <!-- Logo y descripción -->
-            <div class="footer-brand">
-                <h2>ArQuimia</h2>
-                <p>Transformamos espacios con diseño, arquitectura y funcionalidad.</p>
+                <!-- Navegación -->
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="portafolio.html">Proyectos</a>
+                </div>
+
+                <!-- Contacto -->
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Calle del Diseño 123, Madrid, España</p>
+                    <p>✉️ arquimia@estudio.com</p>
+                    <p>☎️ +34 600 000 000</p>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <a href="#" aria-label="Facebook"> <img src="facebook.svg" alt="Facebook"
+                            style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+                        Facebook</a>
+                    <a href="#" aria-label="Instagram"><img src="ins.svg" alt="Facebook"
+                            style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+                        Instagram</a>
+                    <a href="#" aria-label="LinkedIn"><img src="link.svg" alt="Facebook"
+                            style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+                        LinkedIn</a>
+                </div>
             </div>
 
-            <!-- Navegación -->
-            <div class="footer-links">
-                <h4>Enlaces</h4>
-                <a href="/aviso-legal.html">Aviso Legal</a>
-                <a href="/privacidad.html">Política de Privacidad</a>
-                <a href="/contacto.html">Contacto</a>
-                <a href="/proyectos.html">Proyectos</a>
+            <div class="footer-bottom">
+                <p>© 2025 Arquimia. Todos los derechos reservados.</p>
             </div>
-
-            <!-- Contacto -->
-            <div class="footer-contact">
-                <h4>Contacto</h4>
-                <p>📍 Calle del Diseño 123, Madrid, España</p>
-                <p>✉️ arquimia@estudio.com</p>
-                <p>☎️ +34 600 000 000</p>
-            </div>
-
-            <!-- Redes sociales -->
-            <div class="footer-social">
-                <h4>Síguenos</h4>
-                <a href="#" aria-label="Facebook"> <img src="facebook.svg" alt="Facebook" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-  Facebook</a>
-                <a href="#" aria-label="Instagram"><img src="ins.svg" alt="Facebook" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-  Instagram</a>
-                <a href="#" aria-label="LinkedIn"><img src="link.svg" alt="Facebook" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-  LinkedIn</a>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Arquimia. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        </footer>
 
 
-    <script src="scripts.js" defer></script>
+        <script src="scripts.js" defer></script>
 </body>
 
 </html>

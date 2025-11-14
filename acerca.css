@@ -56,7 +56,9 @@ header {
 }
 
 #nav {
-  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* alinea los enlaces a la derecha */
+  flex: 1; /* ocupa el espacio restante */
   text-align: right;
   /* display: block; */
 }
@@ -139,9 +141,8 @@ header {
   }
 
   #nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.295); /* deja ver el contenido detrás */
+    height: auto; /* solo ocupa lo que necesita */
   }
 
   #nav a {
@@ -239,7 +240,7 @@ header {
 .hero {
   position: relative;
   overflow: hidden;
-  height: 90vh; /* altura casi completa de la ventana */
+  height: 80vh; /* altura casi completa de la ventana */
   overflow: hidden;
   /* margin-left: calc(-50vw + 50%); */
   padding: 0;
@@ -407,12 +408,35 @@ blockquote {
   border-radius: 8px;
 }
 
+/*boton subir arriba*/
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+#backToTop:hover {
+  background: #444;
+}
 
 
 
 
-
-
+@media (max-width: 768px) {
+  .bloques-texto {
+    grid-template-columns: 1fr;
+  }
+}
 
 footer {
   background-color: #f7f7f7; /* fondo claro elegante */
