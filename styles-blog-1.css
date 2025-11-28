@@ -43,12 +43,11 @@ header .container {
   max-width: none;
   width: 100%;
   margin: 0;
-  padding: 10px 5px;          /* reduce el espacio lateral */
+  padding: 10px 5px; /* reduce el espacio lateral */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 
 /* Logo */
 .logo img {
@@ -100,17 +99,6 @@ header .container {
     transition: background 0.3s, color 0.3s;  
     padding: 7px 10px;  
 }
-
-
-/* .logo img {
-    height: 45px;
-   
-    width: auto;
-    display: block;
-    object-fit: contain;
-} */
-
-
 
 /* Hover o enlace activo */
 #nav a:hover,
@@ -178,13 +166,11 @@ header .container {
   }
 
 }
-
   .pagina-ficticia {
   background-color: #fadd5d;
   padding: 5px;
   text-align: center;
 }
-
 
 /* ===== HERO PARALLAX BLOG ===== */
 .blog-hero {
@@ -363,9 +349,6 @@ header .container {
     font-size: 0.95rem;
   }
 }
-
-
-
 @media (max-width: 768px) {
   .bloques-texto {
     grid-template-columns: 1fr;
@@ -406,7 +389,7 @@ footer {
   flex-direction: column;
 }
 
-.footer-links h4, .footer-contact h4, .footer-social h4 {
+.footer-links h3, .footer-contact h3, .footer-social h3 {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #222;
@@ -497,4 +480,3 @@ footer {
     margin: 0 8px;
   }
 }
-

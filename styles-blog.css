@@ -102,17 +102,6 @@ header .container {
     padding: 7px 10px;  
 }
 
-
-/* .logo img {
-    height: 45px;
-   
-    width: auto;
-    display: block;
-    object-fit: contain;
-} */
-
-
-
 /* Hover o enlace activo */
 #nav a:hover,
 #nav a.active {
@@ -289,7 +278,6 @@ header .container {
   padding: 0.3em 0.6em;
   border-radius: 0.25em;
   margin-top: 0.5em;
-  
 }
 .blog-hero-4 p {
   font-size: 1.2rem;
@@ -330,7 +318,6 @@ header .container {
   padding: 0.3em 0.6em;
   border-radius: 0.25em;
   margin-top: 0.5em;
-  
 }
 
 .blog-hero-6 {
@@ -526,9 +513,6 @@ header .container {
     font-size: 0.95rem;
   }
 }
-
-
-
 @media (max-width: 768px) {
   .bloques-texto {
     grid-template-columns: 1fr;
@@ -569,7 +553,7 @@ footer {
   flex-direction: column;
 }
 
-.footer-links h4, .footer-contact h4, .footer-social h4 {
+.footer-links h3, .footer-contact h3, .footer-social h3 {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #222;
@@ -660,6 +644,3 @@ footer {
     margin: 0 8px;
   }
 }
-
-
-

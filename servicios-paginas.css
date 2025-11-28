@@ -14,10 +14,6 @@
 
 
 /* ====== ESTILOS BASE ====== */
-/* * {
-  box-sizing: border-box;
-} */
-
 body {
   font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
@@ -42,7 +38,7 @@ header .container {
   max-width: none;
   width: 100%;
   margin: 0;
-  padding: 10px 5px;          /* reduce el espacio lateral */
+  padding: 10px 5px;/* reduce el espacio lateral */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -272,8 +268,6 @@ header .container {
 
 .post-intro {
   margin-bottom: 2rem;
-  /* margin-left: 10px;
-  margin-right: 10px; */
 }
 
 .post-intro p {
@@ -485,9 +479,9 @@ footer {
     flex-direction: column;
 }
 
-.footer-links h4,
-.footer-contact h4,
-.footer-social h4 {
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
     font-size: 1rem;
     margin-bottom: 10px;
     color: #222;
@@ -547,7 +541,6 @@ footer {
     }
 }
 
-
 /* Responsive */
 @media (max-width: 800px) {
     .footer-content {
@@ -566,7 +559,6 @@ footer {
         margin: 0 10px;
     }
 }
-
 
 @media (max-width: 800px) {
     .footer-content {

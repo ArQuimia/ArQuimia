@@ -168,7 +168,6 @@ header {
   .hero-title {
     font-size: 2rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -195,14 +194,6 @@ header {
     height: 50vh;
     /* Ajusta según prefieras */
   }
-
-  /* .blog-hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .blog-hero-content p {
-    font-size: 1rem;
-  } */
 }
 
 .pagina-ficticia {
@@ -353,9 +344,6 @@ footer {
 }
 
 /* ====== SECCIONES ====== */
-
-
-
 body {
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -578,14 +566,10 @@ body {
   gap: 1rem;
 }
 
-
-
 .galeria-proyectos {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding: 60px 20px;
-
-
 }
 
 .galeria-title {
@@ -752,6 +736,27 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+#fun-text-section {
+  background-color: #ffda60; /* amarillo llamativo */
+  padding: 60px 20px;        /* espacio lateral mínimo */
+  font-family: "Rockwell", "Slab Serif", serif;
+  color: #000;
+  text-align: justify;        /* líneas parejitas de lado a lado */
+  line-height: 1.7;
+  font-size: clamp(16px, 2vw, 20px); /* responsive */
+}
+
+/* #fun-text-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+} */
+
+#fun-text-section p {
+  margin-bottom: 20px;
+}
+
+
 
 footer {
   background-color: #f7f7f7;

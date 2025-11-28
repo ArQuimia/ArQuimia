@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
     show(idx);
   });
 
+
+
+
+
+
+
+  
+
   //VALIDACIÓN FORMULARIO
   var form = document.getElementById('contact-form');
   if (form) {

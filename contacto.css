@@ -168,30 +168,7 @@ header .container {
   .hero-title {
     font-size: 2rem;
   }
-
 }
-
-/* .hero-video {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(60%);
-    z-index: 1;
-} */
-
 .hero-overlay {
     position: relative;
     z-index: 2;
@@ -454,9 +431,9 @@ footer {
     flex-direction: column;
 }
 
-.footer-links h4,
-.footer-contact h4,
-.footer-social h4 {
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
     font-size: 1rem;
     margin-bottom: 10px;
     color: #222;
@@ -530,8 +507,6 @@ footer {
         margin: 0 8px;
     }
 }
-
-
 /* Responsive */
 @media (max-width: 800px) {
     .footer-content {

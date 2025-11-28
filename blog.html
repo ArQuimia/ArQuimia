@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,15 +22,15 @@
     <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Nombre Empresa","url":"https://{{TU_USUARIO}}.github.io/{{REPO}}/","logo":"/assets/images/logo.png"}
   </script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RPHRYEGN8V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPHRYEGN8V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-RPHRYEGN8V');
-</script>
+        gtag('config', 'G-RPHRYEGN8V');
+    </script>
 </head>
 
 <body>
@@ -61,23 +62,32 @@
                 </nav>
             </div>
     </header>
-    <section class="hero-video">
+    <!-- <section class="hero-video">
             <video autoplay muted playsinline class="hero-bg">
                 <source src="blog.mp4" type="video/mp4">
             </video>
-        </section>
+        </section> -->
 
-    </p></p>
+    <div id="hero-blog">
+        <div id="falling-letters-container"></div>
+        <div id="manolo-text">Manolo</div>
+    </div>
+
+
+
+    </p>
+    </p>
 
     <section class="intro-blog">
-  <div class="container">
-    <h2>Inspiración, Tendencias y Arquitectura Moderna</h2>
-    <p>
-      Descubre ideas innovadoras, principios de diseño y consejos prácticos para crear espacios con equilibrio, funcionalidad y estética.  
-      Nuestro blog reúne lo mejor del diseño arquitectónico actual para inspirarte en cada proyecto.
-    </p>
-  </div>
-</section>
+        <div class="container">
+            <h2>Inspiración, Tendencias y Arquitectura Moderna</h2>
+            <p>
+                Descubre ideas innovadoras, principios de diseño y consejos prácticos para crear espacios con
+                equilibrio, funcionalidad y estética.
+                Nuestro blog reúne lo mejor del diseño arquitectónico actual para inspirarte en cada proyecto.
+            </p>
+        </div>
+    </section>
 
     <div class="blog-list">
         <div class="blog-entry">
@@ -144,6 +154,50 @@
             <p>© 2025 Arquimia. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("falling-letters-container");
+            const manoloText = document.getElementById("manolo-text");
+            const text = "CREATE YOUR FUTURE";
+            const letters = [...text];
+
+            let delay = 0;
+
+            // Creamos los spans primero para medirlos
+            const spans = letters.map(char => {
+                const span = document.createElement("span");
+                span.classList.add("letter");
+                span.textContent = char === " " ? "\u00A0" : char;
+                container.appendChild(span);
+                return span;
+            });
+
+            // Calculamos posición horizontal dinámica para centrar y evitar amontonamiento
+            const containerWidth = container.clientWidth;
+            let totalTextWidth = 0;
+            const widths = spans.map(span => {
+                const w = span.offsetWidth;
+                totalTextWidth += w;
+                return w;
+            });
+
+            // Espacio sobrante para centrar
+            let startX = (containerWidth - totalTextWidth) / 2;
+
+            spans.forEach((span, i) => {
+                span.style.left = `${startX}px`;
+                startX += widths[i]; // next letter
+                setTimeout(() => span.classList.add("show"), delay);
+                delay += 150;
+            });
+
+            // Mostrar "Manolo" al final
+            setTimeout(() => manoloText.classList.add("show"), delay + 300);
+        });
+    </script>
+
+
+
 
     <script src="scripts.js" defer></script>
 </body>
